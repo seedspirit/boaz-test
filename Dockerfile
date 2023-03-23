@@ -6,8 +6,8 @@ RUN yum install git -y
 
 RUN git clone https://github.com/seedspirit/boaz-test.git
 
-RUN pip install -r requirements.txt
+RUN pip install -r test/boaz-test/requirements.txt
 
-RUN cp lambda_function.py /var/task/
+RUN cp test/boaz-test/lambda_function.py /var/task/
 
 CMD ["lambda_function.handler"]
